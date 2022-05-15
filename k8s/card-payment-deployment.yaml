@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: card-payment-deployment
+  namespace: ravindu-lashan
+  labels:
+    app: card-payment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: card-payment
+  template:
+    metadata:
+      labels:
+        app: card-payment
+    spec:
+      containers:
+        - name: card-payment
+          image: ravindula/card_payment_backend_image:v2
+          ports:
+            - containerPort: 8080
