@@ -10,4 +10,4 @@ RUN ./mvnw dependency:go-offline -B
 RUN ./mvnw package -DskipTests
 RUN ls -al
 
-ENTRYPOINT ["java","-jar","target/*.jar"]
+ENTRYPOINT ["java","-jar","target/PaymentGateway-1.0.0.jar"]
