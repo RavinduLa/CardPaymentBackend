@@ -17,6 +17,6 @@ spec:
     spec:
       containers:
         - name: card-payment
-          image: ravindula/card_payment_backend_image:v2
+          image: ravindula/card_payment_backend_image:{{tag}}
           ports:
             - containerPort: 8080
